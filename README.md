@@ -7,7 +7,7 @@ This is the Home Page for all Laboratories of CSIE spanning several years.
 
 * Deploy
 ```
-rsync --exclude '.*' -av . 42nd@council.csie.ntu.edu.tw:/var/www/html/
+rsync --exclude '.*' -av _site/ 42nd@council.csie.ntu.edu.tw:/var/www/html/
 ```
 
 * Edit index.html and remove disabled tag to add future laboratories. 
