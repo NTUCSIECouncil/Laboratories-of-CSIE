@@ -313,7 +313,7 @@ body {
     background-color: var(--yellow);
 }
 
-.custom-btn:active {
+.custom-btn:enabled:active {
     background-color: var(--brown);
 }
 
