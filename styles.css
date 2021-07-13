@@ -1,0 +1,322 @@
+:root {
+    --background-color: #777ebf;
+    --yellow: #f6b43c;
+    --brown: #62513f;
+}
+
+.title {
+    font-size: 56px;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.owl-container {
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+    .owl-container {
+        margin-left: 150px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 640px) {
+    .owl-container {
+        margin-left: 250px;
+    }
+}
+
+.half-face {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    background-color: #7F674F;
+    border-radius: 100%;
+}
+
+.owl {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.eyes {
+    width: 50px;
+    height: 70px;
+    background-color: #E0C6AE;
+    border-radius: 100%;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+
+@keyframes eyes {
+    100% {
+        left: 23px;
+    }
+}
+
+.eyeball {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    left: 25px;
+    top: 29px;
+}
+
+.eyeballblack {
+    animation-direction: alternate;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    left: 35px;
+    top: 33px;
+}
+
+.body {
+    width: 140px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: -40px;
+    background-color: #E0C6AE;
+    border-radius: 100%;
+}
+
+.face {
+    background-color: var(--brown);
+    width: 140px;
+    height: 130px;
+    border-radius: 100%;
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    z-index: -1;
+}
+
+.wing {
+    background-color: var(--brown);
+    width: 140px;
+    height: 170px;
+    border-radius: 100%;
+    position: absolute;
+    left: -3px;
+    z-index: -1;
+    top: 70px;
+    animation: wing 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes wing {
+    100% {
+        left: -10px;
+    }
+}
+
+@keyframes wing2 {
+    100% {
+        left: 30px;
+    }
+}
+
+.wing.two {
+    animation: wing2 1s infinite;
+    animation-direction: alternate;
+    left: 20px;
+    top: 70px;
+}
+
+.beak {
+    clip-path: polygon(50% 0%, 0 92%, 100% 92%);
+    width: 40px;
+    height: 50px;
+    background-color: var(--yellow);
+    position: absolute;
+    z-index: 2;
+    left: 60px;
+    border-radius: 17px;
+    top: 50px;
+    transform: rotate(180deg);
+}
+
+.ear {
+    position: absolute;
+    background-color: #E0C6AE;
+    width: 60px;
+    height: 30px;
+    left: -8px;
+    border-radius: 100%;
+    transform: rotate(20deg)
+}
+
+.ear.two {
+    left: 110px;
+    border-radius: 100%;
+    transform: rotate(-20deg)
+}
+
+.twig {
+    width: 250px;
+    height: 20px;
+    margin-left: -43px;
+    background-color: #66584E;
+}
+
+.twig.two {
+    width: 100px;
+    height: 10px;
+    transform: rotate(20deg);
+    margin-left: -130px;
+    margin-top: -34px;
+}
+
+.twig.three {
+    transform: rotate(-20deg);
+    margin-left: -118px;
+    margin-top: 27px;
+    width: 80px;
+    height: 10px;
+}
+
+.leaf {
+    margin-left: -140px;
+    width: 40px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: green;
+    z-index: 12px;
+    transform: rotate(-20deg);
+    position: relative;
+}
+
+.leaf.two {
+    margin-left: -170px;
+    margin-top: -50px;
+    transform: rotate(20deg);
+}
+
+.leaf.three {
+    margin-left: -140px;
+    margin-top: -40px;
+}
+
+.leaf.four {
+    margin-left: -160px;
+    margin-top: -60px;
+    transform: rotate(30deg);
+}
+
+.leaf.five {
+    margin-left: -100px;
+    transform: rotate(50deg);
+}
+
+.feet {
+    position: absolute;
+    width: 12px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: var(--yellow);
+    bottom: -30px;
+    left: 43px;
+}
+
+.feet.two {
+    left: 53px;
+}
+
+.feet.three {
+    left: 64px;
+}
+
+.feet.four {
+    left: 87px;
+}
+
+.feet.five {
+    left: 96px;
+}
+
+.feet.six {
+    left: 106px;
+}
+
+
+/* BUTTONS */
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    background: var(--yellow);
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    z-index: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    font-size: 18px;
+}
+
+.custom-btn:disabled,
+.custom-btn[disabled] {
+    /* border: 3px solid #aaaaaa; */
+    background-color: #cccccc;
+    color: #666666;
+    cursor: unset;
+}
+
+.custom-btn:hover:enabled {
+    background: transparent;
+    color: var(--yellow);
+}
+
+.custom-btn:enabled:before,
+.custom-btn:enabled:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 50%;
+    right: 0;
+    z-index: -1;
+    background: var(--yellow);
+    transition: all 0.3s ease;
+}
+
+.custom-btn:before {
+    top: 0;
+}
+
+.custom-btn:after {
+    bottom: 0;
+}
+
+.custom-btn:hover:enabled:before,
+.custom-btn:hover:enabled:after {
+    height: 0;
+    background-color: var(--yellow);
+}
+
+.custom-btn:active {
+    background-color: var(--brown);
+}
+
+.custom-btn:focus {
+    outline: none;
+}

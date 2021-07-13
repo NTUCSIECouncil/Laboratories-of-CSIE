@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+
+    <script src="index.js"></script>
+
+    <title>CSIE Council</title>
+
+</head>
+
+<body>
+    <header class="container py-20 text-center text-white mx-auto">
+        <h1 class="md:text-6xl text-4xl font-bold p-6" style="font-family: 'Poppins', sans-serif;">NTU CSIE COUNCIL</h1>
+    </header>
+
+    <div class="container py-5 mx-auto">
+        <div class="grid lg:grid-cols-3 md:grid-cols-5 grid-cols-2">
+            <!-- LEFT COLUMN -->
+            <div class="text-center mx-auto order-1">
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" onclick=" window.open('https://council.csie.ntu.edu.tw/42nd', '_self')">
+                    42nd
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" onclick=" window.open('https://council.csie.ntu.edu.tw/43rd', '_self')">
+                    43rd
+                </button>
+
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    44th
+                </button>
+
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    45th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    46th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    47th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    48th
+                </button>
+            </div>
+
+            <!-- OWL -->
+            <div class="owl-container mx-auto lg:col-span-1 md:col-span-3 md:order-2 col-span-2 order-first pb-16 ">
+                <div class="owl">
+                    <div class="feet"></div>
+                    <div class="feet two"></div>
+                    <div class="feet three"></div>
+                    <div class="feet four"></div>
+                    <div class="feet five"></div>
+                    <div class="feet six"></div>
+                    <div class="ear"></div>
+                    <div class="ear two"></div>
+                    <div class="face"></div>
+                    <div class="beak"></div>
+                    <div class="flex">
+                        <div class="half-face">
+                            <div class="eyes"></div>
+                            <div class="eyeball"></div>
+                            <div class="eyeballblack" id="eyes"></div>
+                        </div>
+                        <div class="half-face two">
+                            <div class="eyes"></div>
+                            <div class="eyeball"></div>
+                            <div class="eyeballblack" id="eyes2"></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                    </div>
+                    <div class="wing"></div>
+                    <div class="wing two"></div>
+                </div>
+
+                <div class="twig"></div>
+                <div class="twig two"></div>
+                <div class="twig three"></div>
+                <div class="leaf"></div>
+                <div class="leaf two"></div>
+                <div class="leaf three"></div>
+                <div class="leaf four"></div>
+                <div class="leaf five"></div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="text-center mx-auto order-3">
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    49th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    50th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    51st
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    52nd
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    53rd
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    54th
+                </button>
+                <button type="button" class="custom-btn" data-mdb-ripple-color="dark" disabled>
+                    55th
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container mx-auto text-white text-center" style="margin-top: 50px; margin-bottom: 50px;">
+        <a href="https://codepen.io/samritha/pen/eYWNBJR"><i class="fas fa-pen text-white p-2"></i></a>
+        <a target="_blank " href="https://github.com/NTUCSIECouncil/Laboratories-of-CSIE-2021 "><i class="fab fa-github fa-lg text-white p-2"></i></a>
+    </footer>
+
+
+</body>
+
+</html>
