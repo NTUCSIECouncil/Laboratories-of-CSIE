@@ -24,11 +24,13 @@ body {
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 640px) {
+@media only screen and (max-width: 767px) and (min-width: 640px) {
     .owl-container {
         margin-left: 250px;
     }
 }
+
+/* OWL */
 
 .half-face {
     position: relative;
@@ -249,6 +251,69 @@ body {
     left: 106px;
 }
 
+/* OWL for smaller screens */
+@media only screen and (max-width: 450px) {
+
+    .owl {
+        margin-left: -10vw;
+    }
+
+    .twig {
+        max-width: 250px;
+        height: 20px;
+        margin-left: -83px;
+        background-color: #66584E;
+    }
+
+    .twig.two {
+        width: 100px;
+        height: 10px;
+        transform: rotate(20deg);
+        margin-left: -170px;
+        margin-top: -34px;
+    }
+
+    .twig.three {
+        transform: rotate(-20deg);
+        margin-left: -158px;
+        margin-top: 27px;
+        width: 80px;
+        height: 10px;
+    }
+
+    .leaf {
+        margin-left: -180px;
+        width: 40px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: green;
+        z-index: 12px;
+        transform: rotate(-20deg);
+        position: relative;
+    }
+
+    .leaf.two {
+        margin-left: -210px;
+        margin-top: -50px;
+        transform: rotate(20deg);
+    }
+
+    .leaf.three {
+        margin-left: -180px;
+        margin-top: -40px;
+    }
+
+    .leaf.four {
+        margin-left: -200px;
+        margin-top: -60px;
+        transform: rotate(30deg);
+    }
+
+    .leaf.five {
+        margin-left: -140px;
+        transform: rotate(50deg);
+    }
+}
 
 /* BUTTONS */
 
