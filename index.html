@@ -4,15 +4,17 @@ title: CSIE Council
 ---
 
 <!-- GRID SECTION -->
-
+<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 <div class="grid grid-cols-2 md:grid-cols-4 mx-auto">
-	{% for post in site.posts %}
-	<button class="p-0 m-4" onclick="location.href='{{ post.url | relative_url }}'" type="button">
-		<div class="mx-auto flex flex-col justify-center items-center rounded-3xl active:bg-pink-100 hover:bg-pink-50 p-5" style="max-width: 16rem;">
-			<div class="mx-auto bg-cover bg-center rounded-full w-28 h-28 lg:w-36 lg:h-36 my-2 shadow-md" style="background-image: url('{{site.baseurl}}/assets/img/{{ post.title }}.png');">
+	{% for category in site.categories %}
+	<div class="p-0 m-4" ><!--button-->
+		<div class="mx-auto flex flex-col justify-center items-center rounded-3xl active:bg-blue-100 hover:bg-blue-50 p-5"
+			style="max-width: 16rem;">
+			<div class="mx-auto bg-cover bg-center rounded-full w-28 h-28 lg:w-36 lg:h-36 my-2 shadow-md"
+				style="background-image: url('{{site.baseurl}}/assets/img/{{  category[0]  }}.png');">
 			</div>
 
-			<div class="name_section" id="{{ post.title }}">
+			<div class="name_section" id="{{ category[0] }}">
 				<div class="chin_name text-sm lg:text-lg font-noto font-semibold">
 					教授
 				</div>
@@ -22,11 +24,41 @@ title: CSIE Council
 				<span class="px-4 my-2 h-12 block lab_name text-gray-400 font-bold font-source text-xs lg:text-md">
 					lab
 				</span>
+
+
+			
+				<button
+					class="h-10 flex flex-row justify-around w-28 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+					type="button" data-dropdown-toggle="dropdown-{{category[0]}}">
+					<div>
+						{{category[1][0].date | date:"%Y"}}
+					</div>
+					
+					<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
+				</a>
+				<!-- Dropdown menu -->
+
+
+				<div class="hidden bg-white z-50 divide-y divide-gray-100 rounded shadow" id="dropdown-{{category[0]}}">
+					{% for post in category[1] %}
+					<div class="max-width">
+						<a href='{{ post.url | relative_url }}'
+							class="text-center text-sm hover:bg-blue-100 text-gray-700 block px-4 py-2 font-noto font-semibold">{{post.date
+							| date:"%Y"}}</a>
+					</div>
+					{% endfor %}
+					</ul>
+				</div>
 			</div>
-		<!-- {{ post.excerpt }} -->
+
+
+			<!-- {{ post.excerpt }} -->
 		</div>
-	</a>
-	{% endfor %}
+
+	</div>
+		{% endfor %}
 </div>
 <script src={{ "/index.js" | relative_url }} async defer></script>
-

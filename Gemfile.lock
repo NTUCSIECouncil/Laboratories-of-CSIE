@@ -39,6 +39,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-youtube (1.0.0)
+      jekyll
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -73,9 +75,10 @@ DEPENDENCIES
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-youtube
 
 RUBY VERSION
-   ruby 2.7.5p203
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   2.3.7
+   2.3.16

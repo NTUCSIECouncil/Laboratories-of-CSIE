@@ -26,7 +26,14 @@ professors = {
     "Cf_chou": ["周承復", "Cheng-Fu Chou", "Communication and Multimedia Lab"],
     "Lc_fu": ["傅立成", "Li-Chen Fu", "Intelligent Robotics and Automation Lab"],
     "Hc_hsiao": ["蕭旭君", "Hsu-Chun Hsiao", "Network Security Lab"],
-    "Yf_tseng": ["曾宇鳳", "Yu-Feng Tseng", "Bioinformatics and Cheminformatics Lab"]
+    "Yf_tseng": ["曾宇鳳", "Yu-Feng Tseng", "Bioinformatics and Cheminformatics Lab"],
+    
+    // new professors add by hensuu:
+    "Rf_chang": ["張瑞峰", "Ruey-Feng Chang", "Medical Image Processing Lab"],
+    "Mike_chen": ["陳彥仰", "Mike Yen-Yang Chen", "Human Computer Interaction Lab"],
+    "Hm_tsai": ["蔡欣穆", "Hsin-Mu Tsai", "Mobile and Vehicular Network Lab"],
+    "Pj_cheng": ["鄭卜壬", "Pu-Jen Cheng", "Web Mining and Information Retrieval Lab"],
+    
     // "": ["", "", ""],
 }
 
