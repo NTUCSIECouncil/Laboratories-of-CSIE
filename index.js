@@ -4,7 +4,7 @@ professors = {
     "St_chen": ["陳尚澤", "Shang-Tse Chen", "Machine Learning and Security"],
     "Cs_fuh": ["傅楸善", "Chiou-Shann Fuh", "Digital Camera and Computer Vision Lab"],
     "Sh_hung": ["洪士灝", "Shih-Hao Hung", "Performance, Application and Security Lab"],
-    "Cs_shih": ["施吉昇", "Chi-Sheng Shih", "Logic Laboratory, Embedded System and Wireless Networking Lab"],
+    "Cs_shih": ["施吉昇", "Chi-Sheng Shih", "Embedded System and Wireless Networking Lab"],
     "Cw_lin": ["林忠緯", "Chung-Wei Lin", "Cyber-Physical Systems Lab"],
     "Pf_liu": ["劉邦鋒", "Pangfeng Liu", "Parallel and Distributed Processing Lab"],
     "Tony_tan": ["陳偉松", "Tony Tan", "Logic and database lab"],
@@ -14,7 +14,7 @@ professors = {
     "Ht_lin": ["林軒田", "Hsuan-Tien Lin", "Computational Learning Lab"],
     "Yn_chen": ["陳縕儂", "Yun-Nung Chen", "Machine Intelligence and Understanding"],
     "Yp_hung": ["洪一平", "Yi-Ping Hung", "Image and Vision Lab"],
-    "Yh_li": ["李彥寰", "Yen-Huan Li", "Laboratory for Learning Theory and Optimization Methods"],
+    "Yh_li": ["李彥寰", "Yen-Huan Li", "Lab for Learning Theory and Optimization Methods"],
     "Cs_chen": ["陳祝嵩", "Chu-Song Chen", "AI Application and Integration (AI^2) Lab"],
     "Hh_chen": ["陳信希", "Hsin-Hsi Chen", "Natural Language Processing Lab"],
     "Cl_yang": ["楊佳玲", "Chia-Lin Yang", "Embedded Computing Lab"],
@@ -30,10 +30,11 @@ professors = {
     
     // new professors add by hensuu:
     "Rf_chang": ["張瑞峰", "Ruey-Feng Chang", "Medical Image Processing Lab"],
-    "Mike_chen": ["陳彥仰", "Mike Yen-Yang Chen", "Human Computer Interaction Lab"],
+    "Mike_chen": ["陳彥仰", "Mike Y. Chen", "Human Computer Interaction Lab"],
     "Hm_tsai": ["蔡欣穆", "Hsin-Mu Tsai", "Mobile and Vehicular Network Lab"],
     "Pj_cheng": ["鄭卜壬", "Pu-Jen Cheng", "Web Mining and Information Retrieval Lab"],
-    
+    "Sw_liao": ["廖世偉", "Shih-Wei Liao", "A Blockchain Consensus Lab"],
+    "Sw_li": ["黎士瑋", "Shih-Wei Li", "Security and Software Systems Lab"],
     // "": ["", "", ""],
 }
 
