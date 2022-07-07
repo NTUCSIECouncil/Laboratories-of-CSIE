@@ -1,6 +1,9 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./*.{html,js}",
+    "./**/*.{html,js}",
+  ],
   theme: {
     fontFamily: {
       'display': ['Playfair Display', 'serif'],
@@ -13,6 +16,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+      transitionProperty: ['hover', 'focus'],
     },
   },
   plugins: [],

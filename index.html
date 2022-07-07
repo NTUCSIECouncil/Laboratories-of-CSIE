@@ -5,69 +5,76 @@ title: CSIE Council
 
 <!-- GRID SECTION -->
 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-<div class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto items-center">
-	{% for category in site.categories reversed%}
-	
-		<div class="m-4 mb-8" onclick="location.href='{{ category[1][0].url | relative_url }}'">
 
-			<div class="mx-auto flex flex-col justify-center items-center rounded-3xl  hover:bg-indigo-50 p-2 "
-				style="max-width: 16rem;">
-				<div class="mx-auto bg-cover bg-center rounded-full w-28 h-28 lg:w-36 lg:h-36 my-2 shadow-md"
-					style="background-image: url('{{site.baseurl}}/assets/img/{{  category[0]  }}.png');">
-				</div>
+{% assign tags = "AI,CV,System,Blockchain,Security,VR&AR,Network,Computing,Graphics,Optimization,DIP,FinTech,eHealth,Robot,NLP,IoT,HCI,Logic&Automata,IR,Light" | split:',' %}
 
-				<div class="h-28 md:h-28 lg:h-28 name_section" id="{{ category[0] }}">
-					<div class="chin_name text-sm lg:text-lg font-noto font-semibold">
-						教授
-					</div>
-					<div class=" block eng_name text-sm lg:text-lg font-source font-bold">
-						professor
-					</div>
-					<span class="px-1 my-2 h-12 block lab_name text-gray-400 font-bold font-source text-xs lg:text-md">
-						lab
-					</span>
+<div id="filter">
+	{% for tag in tags %}
+	<button class="rounded-full text-white bg-gradient-to-bl from-cyan-500 to-blue-500 m-1 p-1 px-4 my-2" id={{ tag }}>
+		{{ tag }}
+	</button>
+	{% endfor %}
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto items-center">
+	{% for category in site.categories reversed %}
 
 
+	<div class="p-4 pb-8 flex flex-col justify-center items-center rounded-3xl hover:bg-indigo-50 m-2 professor"
+		style="max-width: 16rem;" onclick="location.href='{{ category[1][0].url | relative_url }}'" >
+		<div class="mx-auto bg-cover bg-center rounded-full w-28 h-28 lg:w-36 lg:h-36 my-2 shadow-md"
+			style="background-image: url('{{site.baseurl}}/assets/img/{{  category[0]  }}.png');">
+		</div>
 
+		<div class="h-28 md:h-28 lg:h-28 name_section" id="{{ category[0] }}">
+			<div class="chin_name text-sm lg:text-lg font-noto font-semibold">
+				教授
+			</div>
+			<div class="block eng_name text-sm lg:text-lg font-source font-bold">
+				professor
+			</div>
+			<span class="px-1 my-2 h-12 block lab_name text-gray-400 font-bold font-source text-xs lg:text-md">
+				lab
+			</span>
 
-				</div>
+		</div>
 
-				<div class="w-32 flex flex-row justify-around m-2">
+		<div class="w-32 flex flex-row justify-around m-2">
 
-					<!-- <button
+			<!-- <button
 						class="shadow-md w-24 mr-1 h-9 flex flex-row justify-center text-white bg-indigo-700   focus:ring-indigo-200  rounded-lg items-center text-center"
 						type="button" onclick="location.href='{{ category[1][0].url | relative_url }}'">
 						{{category[1][0].date | date:"%Y"}}
 					</button> -->
-					<button
-						class="shadow-md w-28 h-9 flex flex-row justify-center text-white bg-gray-700 hover:bg-gray-800 focus:ring focus:ring-indigo-200  rounded-lg items-center"
-						type="button" data-dropdown-toggle="dropdown-{{category[0]}}" onclick="window.event.stopPropagation();">
-						{{category[1][0].date | date:"%Y"}}
-						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-							</path>
-						</svg>
-					</button>
-				</div><!-- Dropdown menu -->
+			<button
+				class="shadow-md w-28 h-9 flex flex-row justify-center text-white bg-gray-700 hover:bg-gray-800 focus:ring focus:ring-indigo-200  rounded-lg items-center"
+				type="button" data-dropdown-toggle="dropdown-{{category[0]}}" onclick="window.event.stopPropagation();">
+				{{category[1][0].date | date:"%Y"}}
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+					</path>
+				</svg>
+			</button>
+		</div><!-- Dropdown menu -->
 
 
-				<div class="hidden bg-white z-50 divide-y divide-gray-200 rounded-md shadow-md " id="dropdown-{{category[0]}}">
-					{% for post in category[1] %}
-					<div class="max-width">
-						<a href='{{ post.url | relative_url }}'
-							class="text-center text-md hover:bg-indigo-100 block px-6 py-2.5  font-bold">{{post.date
-							| date:"%Y"}}</a>
-					</div>
-					{% endfor %}
-					</ul>
-				</div>
-
-				<!-- {{ post.excerpt }} -->
+		<div class="hidden bg-white z-50 divide-y divide-gray-200 rounded-md shadow-md " id="dropdown-{{category[0]}}">
+			{% for post in category[1] %}
+			<div class="max-width">
+				<a href='{{ post.url | relative_url }}'
+					class="text-center text-md hover:bg-indigo-100 block px-6 py-2.5  font-bold">{{post.date
+					| date:"%Y"}}</a>
 			</div>
-
+			{% endfor %}
+			</ul>
 		</div>
-	
+
+		<!-- {{ post.excerpt }} -->
+	</div>
+
+
+
 	{% endfor %}
 </div>
 <script src={{ "/index.js" | relative_url }} async defer></script>
