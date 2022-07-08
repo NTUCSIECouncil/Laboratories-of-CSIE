@@ -19,10 +19,10 @@ bundle install
 bundle exec jekyll serve --livereload
 ```
 
-* Compile tailwindcss
+* Compile tailwindcss real-time
 
 ```
-npx tailwindcss-cli@0.1.2 build -i ./assets/css/base.css -c tailwind.config.js -o ./assets/css/tailwind.css
+npx tailwindcss -i ./assets/css/base.css -o ./assets/css/tailwind.css --watch
 ```
 
 * Deploy to server
