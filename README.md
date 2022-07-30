@@ -1,4 +1,4 @@
-# CSIECouncil-2021
+# CSIECouncil-2022
 
 ## Usage
 
@@ -38,6 +38,8 @@ bash serve.sh
 ```
 
 [Jekyll Website](https://jekyllrb.com/)
+
+[2022 CSIE Council](https://council.csie.ntu.edu.tw/44th/)
 
 [2021 CSIE Council](https://council.csie.ntu.edu.tw/43rd/)
 
