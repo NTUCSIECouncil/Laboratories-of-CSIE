@@ -10,7 +10,7 @@ title: CSIE Council
 
 <div class="" id="filter">
 	{% for tag in tags %}
-	<button class=" rounded-full text-sm font-semibold text-white bg-sky-500 m-1 p-1 px-3 my-1.5" id={{ tag }}>
+	<button class=" rounded-full text-sm font-medium text-white bg-sky-500 m-1 p-1 px-3 my-1.5" id={{ tag }}>
 		{{ tag }}
 	</button>
 	{% endfor %}
@@ -62,11 +62,12 @@ title: CSIE Council
 		<!-- Dropdown menu -->
 
 
-		<div class="hidden bg-white z-50 w-20 divide-y divide-gray-200 rounded-md shadow-md" id="dropdown-{{category[0]}}">
+		<div class="hidden bg-white z-50 w-24 divide-y divide-gray-200 rounded-md shadow-md" id="dropdown-{{category[0]}}">
 			{% for post in category[1] %}
-			<div href='{{ post.url | relative_url }}'>
-				<div class="cursor-pointer text-sky-500 underline text-center text-md rounded-md px-4 py-2 font-bold">{{post.date
-					| date:"%Y"}}</div>
+			<div class="max-width">
+				<a href='{{ post.url | relative_url }}'
+					class="text-center text-md block px-6 py-2 font-bold">{{post.date
+					| date:"%Y"}}</a>
 			</div>
 			{% endfor %}
 			</ul>
