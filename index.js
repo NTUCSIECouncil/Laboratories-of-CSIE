@@ -71,19 +71,20 @@ window.addEventListener('load', function () {
 })
 
 function filter_click_event(event) {
-        
     if (selected.includes(event.currentTarget.id)) {
         selected = selected.filter(x => x != event.currentTarget.id);
-        event.currentTarget.classList.add("from-blue-500");
-        event.currentTarget.classList.remove("from-fuchsia-500");
+        
+        event.currentTarget.classList.remove("ring-orange-300");
+        event.currentTarget.classList.remove("ring");
     } else {
         selected.push(event.currentTarget.id);
-        event.currentTarget.classList.remove("from-blue-500");
-        event.currentTarget.classList.add("from-fuchsia-500");
+        
+        event.currentTarget.classList.add("ring-orange-300");
+        event.currentTarget.classList.add("ring");
     }
 
-
     var sections = document.getElementsByClassName("professor");
+
     for (let i = 0; i < sections.length; ++i) {
         let id = sections[i].children[1].id;
         console.log(id);

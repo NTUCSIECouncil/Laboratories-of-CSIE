@@ -8,9 +8,9 @@ title: CSIE Council
 
 {% assign tags = "AI,CV,System,Blockchain,Security,VR&AR,Network,Computing,Graphics,Optimization,DIP,FinTech,eHealth,Robot,NLP,IoT,HCI,Logic&Automata,IR,Light" | split:',' %}
 
-<div id="filter">
+<div class="" id="filter">
 	{% for tag in tags %}
-	<button class="rounded-full text-white bg-gradient-to-bl from-cyan-500 to-blue-500 m-1 p-1 px-4 my-2" id={{ tag }}>
+	<button class=" rounded-full text-sm font-semibold text-white bg-sky-500 m-1 p-1 px-3 my-1.5" id={{ tag }}>
 		{{ tag }}
 	</button>
 	{% endfor %}
@@ -20,7 +20,7 @@ title: CSIE Council
 	{% for category in site.categories reversed %}
 
 
-	<div class="p-4 pb-8 flex flex-col justify-center items-center rounded-3xl hover:bg-indigo-50 m-2 professor"
+	<div class="p-4 pb-6 flex flex-col justify-center items-center rounded-3xl hover:bg-sky-50 m-2 professor"
 		style="max-width: 16rem;" onclick="location.href='{{ category[1][0].url | relative_url }}'" >
 		<div class="mx-auto bg-cover bg-center rounded-full w-28 h-28 lg:w-36 lg:h-36 my-2 shadow-md"
 			style="background-image: url('{{site.baseurl}}/assets/img/{{  category[0]  }}.png');">
@@ -39,7 +39,7 @@ title: CSIE Council
 
 		</div>
 
-		<div class="w-32 flex flex-row justify-around m-2">
+		
 
 			<!-- <button
 						class="shadow-md w-24 mr-1 h-9 flex flex-row justify-center text-white bg-indigo-700   focus:ring-indigo-200  rounded-lg items-center text-center"
@@ -47,24 +47,26 @@ title: CSIE Council
 						{{category[1][0].date | date:"%Y"}}
 					</button> -->
 			<button
-				class="shadow-md w-28 h-9 flex flex-row justify-center text-white bg-gray-700 hover:bg-gray-800 focus:ring focus:ring-indigo-200  rounded-lg items-center"
+				class="mb-1 pl-4 p-3 shadow-md w-24 h-9 flex flex-row justify-around text-white bg-gray-600 hover:bg-gray-700 rounded-lg items-center"
 				type="button" data-dropdown-toggle="dropdown-{{category[0]}}" onclick="window.event.stopPropagation();">
-				{{category[1][0].date | date:"%Y"}}
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+				<div>
+					{{category[1][0].date | date:"%Y"}}
+				</div>
+				
+				<svg class="w-4 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
 					</path>
 				</svg>
 			</button>
-		</div><!-- Dropdown menu -->
+		<!-- Dropdown menu -->
 
 
-		<div class="hidden bg-white z-50 divide-y divide-gray-200 rounded-md shadow-md " id="dropdown-{{category[0]}}">
+		<div class="hidden bg-white z-50 w-20 divide-y divide-gray-200 rounded-md shadow-md" id="dropdown-{{category[0]}}">
 			{% for post in category[1] %}
-			<div class="max-width">
-				<a href='{{ post.url | relative_url }}'
-					class="text-center text-md hover:bg-indigo-100 block px-6 py-2.5  font-bold">{{post.date
-					| date:"%Y"}}</a>
+			<div href='{{ post.url | relative_url }}'>
+				<div class="cursor-pointer text-sky-500 underline text-center text-md rounded-md px-4 py-2 font-bold">{{post.date
+					| date:"%Y"}}</div>
 			</div>
 			{% endfor %}
 			</ul>
