@@ -1,5 +1,4 @@
 #! /bin/bash
 
 bundle exec jekyll build --config _config_prod.yml
-cp index.js _site/
-rsync -av _site/ 42nd@council.csie.ntu.edu.tw:/var/www/44th/
+rsync -av _site/ academic@council.csie.ntu.edu.tw:/var/www/html/

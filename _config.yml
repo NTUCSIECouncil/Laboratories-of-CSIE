@@ -10,3 +10,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-youtube
+
+include: ["/_data", "index.js"]

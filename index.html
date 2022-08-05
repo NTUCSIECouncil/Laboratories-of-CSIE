@@ -10,7 +10,7 @@ title: CSIE Council
 
 <div class="" id="filter">
 	{% for tag in tags %}
-	<button class=" rounded-full text-sm font-medium text-white bg-sky-500 m-1 p-1 px-3 my-1.5" id={{ tag }}>
+	<button class=" rounded-full text-sm font-medium text-white bg-sky-500 hover:bg-sky-600 m-1 p-1 px-3 my-1.5" id={{ tag }}>
 		{{ tag }}
 	</button>
 	{% endfor %}
@@ -18,7 +18,8 @@ title: CSIE Council
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto items-center">
 	{% for category in site.categories reversed %}
-
+	{% assign key = category[0] %}
+	{% assign data = site.data.professors | where: "category", key | first %}
 
 	<div class="p-4 pb-6 flex flex-col justify-center items-center rounded-3xl hover:bg-sky-50 m-2 professor"
 		style="max-width: 16rem;" onclick="location.href='{{ category[1][0].url | relative_url }}'" >
@@ -28,37 +29,30 @@ title: CSIE Council
 
 		<div class="h-28 md:h-28 lg:h-28 name_section" id="{{ category[0] }}">
 			<div class="chin_name text-sm lg:text-lg font-noto font-semibold">
-				教授
+				{{ data.chin_name }}
 			</div>
 			<div class="block eng_name text-sm lg:text-lg font-source font-bold">
-				professor
+				{{ data.eng_name }}
 			</div>
 			<span class="px-1 my-2 h-12 block lab_name text-gray-400 font-bold font-source text-xs lg:text-md">
-				lab
+				{{ data.lab | upcase }}
 			</span>
 
 		</div>
 
-		
-
-			<!-- <button
-						class="shadow-md w-24 mr-1 h-9 flex flex-row justify-center text-white bg-indigo-700   focus:ring-indigo-200  rounded-lg items-center text-center"
-						type="button" onclick="location.href='{{ category[1][0].url | relative_url }}'">
-						{{category[1][0].date | date:"%Y"}}
-					</button> -->
-			<button
-				class="mb-1 pl-4 p-3 shadow-md w-24 h-9 flex flex-row justify-around text-white bg-gray-600 hover:bg-gray-700 rounded-lg items-center"
-				type="button" data-dropdown-toggle="dropdown-{{category[0]}}" onclick="window.event.stopPropagation();">
-				<div>
-					{{category[1][0].date | date:"%Y"}}
-				</div>
-				
-				<svg class="w-4 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-					</path>
-				</svg>
-			</button>
+		<button
+			class="mb-1 pl-4 p-3 shadow-md w-24 h-9 flex flex-row justify-around text-white bg-gray-600 hover:bg-gray-700 rounded-lg items-center"
+			type="button" data-dropdown-toggle="dropdown-{{category[0]}}" onclick="window.event.stopPropagation();">
+			<div>
+				{{category[1][0].date | date:"%Y"}}
+			</div>
+			
+			<svg class="w-4 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+				</path>
+			</svg>
+		</button>
 		<!-- Dropdown menu -->
 
 
@@ -80,4 +74,4 @@ title: CSIE Council
 
 	{% endfor %}
 </div>
-<script src={{ "/index.js" | relative_url }} async defer></script>
+<script type="module" src={{ "/index.js" | relative_url }} async defer></script>

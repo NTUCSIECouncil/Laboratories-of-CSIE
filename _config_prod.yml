@@ -11,5 +11,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-youtube
 
+include: ["/_data", "index.js"]
 url: "https://council.csie.ntu.edu.tw"
-baseurl: "/44th"
+baseurl: ""
