@@ -1,4 +1,6 @@
-# CSIECouncil-2022
+# CSIECouncil
+
+此為台灣大學資訊工程系系學會專題訪談網站，含括歷年來各教授的採訪內容。
 
 ## Usage
 
@@ -37,10 +39,3 @@ bash deploy.sh
 bash serve.sh
 ```
 
-[Jekyll Website](https://jekyllrb.com/)
-
-[2022 CSIE Council](https://council.csie.ntu.edu.tw/44th/)
-
-[2021 CSIE Council](https://council.csie.ntu.edu.tw/43rd/)
-
-[2020 CSIE Council](https://council.csie.ntu.edu.tw/42nd/)
