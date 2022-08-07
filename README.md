@@ -1,4 +1,6 @@
-# CSIECouncil-2022
+# CSIECouncil
+
+此為台灣大學資訊工程系系學會專題訪談網站，含括歷年來各教授的採訪內容。
 
 ## Usage
 
