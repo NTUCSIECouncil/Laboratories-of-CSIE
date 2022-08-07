@@ -12,5 +12,6 @@ plugins:
   - jekyll-youtube
 
 include: ["/_data", "index.js"]
+exclude: ["/.git"]
 url: "https://council.csie.ntu.edu.tw"
 baseurl: ""

@@ -12,3 +12,4 @@ plugins:
   - jekyll-youtube
 
 include: ["/_data", "index.js"]
+exclude: ["/.git"]
