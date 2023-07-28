@@ -361,5 +361,12 @@
             "System",
             "Security"
         ]
+    },
+    {
+        "category": "Km_chao",
+        "chin_name": "趙坤茂",
+        "eng_name": "Kun-Mao Chao",
+        "lab": "Algorithms & Computational Biology Laboratory",
+        "tags": []
     }
 ]
