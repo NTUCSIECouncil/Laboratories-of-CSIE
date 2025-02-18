@@ -368,5 +368,12 @@
         "eng_name": "Kun-Mao Chao",
         "lab": "Algorithms & Computational Biology Laboratory",
         "tags": []
+    },
+    {
+        "category": "By_chen",
+        "chin_name": "陳炳宇",
+        "eng_name": "Bing-Yu Chen",
+        "lab": "Interactive Graphics Laboratory & Communication and Multimedia Lab",
+        "tags": []
     }
 ]
